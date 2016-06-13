@@ -1,0 +1,6 @@
+framework module BaoFooAuthorize {
+  umbrella header "BaoFooAuthorize.h"
+
+  export *
+  module * { export * }
+}

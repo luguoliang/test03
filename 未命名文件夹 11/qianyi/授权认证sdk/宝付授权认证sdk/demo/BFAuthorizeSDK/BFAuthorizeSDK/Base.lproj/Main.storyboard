@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DV5-SO-zU7">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Imx-sQ-v7J">
+            <objects>
+                <navigationController id="DV5-SO-zU7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Iy-Tw-04h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4In-Xu-iyc" kind="relationship" relationship="rootViewController" id="Wi8-tO-z01"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dXq-90-Xno" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113" y="378"/>
+        </scene>
+        <!--宝付授权协议demo-测试-->
+        <scene sceneID="lTE-mZ-dss">
+            <objects>
+                <viewController id="4In-Xu-iyc" customClass="MianViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rNT-zs-MQp"/>
+                        <viewControllerLayoutGuide type="bottom" id="NXK-uz-Otl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nGj-mK-7Sv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwl-dS-KFV">
+                                <rect key="frame" x="285" y="365" width="30" height="30"/>
+                                <state key="normal" title="授权"/>
+                                <connections>
+                                    <action selector="AuthorizeButton:" destination="4In-Xu-iyc" eventType="touchUpInside" id="1id-hn-PF0"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入会员ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sEl-KP-Ucv">
+                                <rect key="frame" x="40" y="185" width="520" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="merchant_id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F6d-NU-9d5">
+                                <rect key="frame" x="40" y="220" width="520" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4In-Xu-iyc" id="f2d-KM-TbM"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="terminal_id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ynA-zx-hPK">
+                                <rect key="frame" x="40" y="255" width="520" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4In-Xu-iyc" id="4Pb-tZ-ou6"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="model" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pah-5F-Gen">
+                                <rect key="frame" x="40" y="290" width="520" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4In-Xu-iyc" id="MXN-09-4il"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="service_url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ERT-ot-w0j">
+                                <rect key="frame" x="40" y="325" width="520" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4In-Xu-iyc" id="3hz-05-PsZ"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="page_url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FiM-uK-UAN">
+                                <rect key="frame" x="40" y="147" width="520" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4In-Xu-iyc" id="gA4-2f-QJ2"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F6d-NU-9d5" firstAttribute="top" secondItem="sEl-KP-Ucv" secondAttribute="bottom" constant="5" id="2hV-Xg-gey"/>
+                            <constraint firstItem="FiM-uK-UAN" firstAttribute="leading" secondItem="sEl-KP-Ucv" secondAttribute="leading" id="48i-xZ-ycd"/>
+                            <constraint firstItem="sEl-KP-Ucv" firstAttribute="centerX" secondItem="nGj-mK-7Sv" secondAttribute="centerX" id="8Sn-oU-shg"/>
+                            <constraint firstItem="pah-5F-Gen" firstAttribute="leading" secondItem="sEl-KP-Ucv" secondAttribute="leading" id="9ZZ-Sc-Cc5"/>
+                            <constraint firstItem="ynA-zx-hPK" firstAttribute="leading" secondItem="sEl-KP-Ucv" secondAttribute="leading" id="ChL-Jm-WHc"/>
+                            <constraint firstItem="ynA-zx-hPK" firstAttribute="trailing" secondItem="sEl-KP-Ucv" secondAttribute="trailing" id="CwD-ji-2vb"/>
+                            <constraint firstItem="cwl-dS-KFV" firstAttribute="centerX" secondItem="nGj-mK-7Sv" secondAttribute="centerX" id="D0y-7U-F8r"/>
+                            <constraint firstItem="ERT-ot-w0j" firstAttribute="top" secondItem="pah-5F-Gen" secondAttribute="bottom" constant="5" id="FSK-TK-roG"/>
+                            <constraint firstItem="ynA-zx-hPK" firstAttribute="top" secondItem="F6d-NU-9d5" secondAttribute="bottom" constant="5" id="GC4-CI-p33"/>
+                            <constraint firstItem="F6d-NU-9d5" firstAttribute="leading" secondItem="sEl-KP-Ucv" secondAttribute="leading" id="Khh-Fi-YE4"/>
+                            <constraint firstItem="pah-5F-Gen" firstAttribute="top" secondItem="ynA-zx-hPK" secondAttribute="bottom" constant="5" id="LUn-sf-sga"/>
+                            <constraint firstItem="ERT-ot-w0j" firstAttribute="leading" secondItem="sEl-KP-Ucv" secondAttribute="leading" id="NCe-CA-qQZ"/>
+                            <constraint firstItem="sEl-KP-Ucv" firstAttribute="centerY" secondItem="nGj-mK-7Sv" secondAttribute="centerY" constant="-100" id="NTY-Dk-6u3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sEl-KP-Ucv" secondAttribute="trailing" constant="20" id="Quc-xn-EIy"/>
+                            <constraint firstItem="cwl-dS-KFV" firstAttribute="top" secondItem="ERT-ot-w0j" secondAttribute="bottom" constant="10" id="dzD-zg-508"/>
+                            <constraint firstItem="sEl-KP-Ucv" firstAttribute="leading" secondItem="nGj-mK-7Sv" secondAttribute="leadingMargin" constant="20" id="gUw-bK-cj1"/>
+                            <constraint firstItem="F6d-NU-9d5" firstAttribute="trailing" secondItem="sEl-KP-Ucv" secondAttribute="trailing" id="nbj-1N-Sy7"/>
+                            <constraint firstItem="pah-5F-Gen" firstAttribute="trailing" secondItem="sEl-KP-Ucv" secondAttribute="trailing" id="qrO-ui-qRN"/>
+                            <constraint firstItem="FiM-uK-UAN" firstAttribute="trailing" secondItem="sEl-KP-Ucv" secondAttribute="trailing" id="u7b-XN-SlR"/>
+                            <constraint firstItem="sEl-KP-Ucv" firstAttribute="top" secondItem="FiM-uK-UAN" secondAttribute="bottom" constant="5" id="ySq-qx-elB"/>
+                            <constraint firstItem="ERT-ot-w0j" firstAttribute="trailing" secondItem="sEl-KP-Ucv" secondAttribute="trailing" id="zAB-7v-Fkc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="宝付授权协议demo-测试" id="mpV-Et-HLP">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="dv1-T9-7I9">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="U6N-fE-bGF">
+                                <rect key="frame" x="20" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="测试"/>
+                                    <segment title="准生产"/>
+                                    <segment title="生产"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segment:" destination="4In-Xu-iyc" eventType="valueChanged" id="eOA-6b-vth"/>
+                                </connections>
+                            </segmentedControl>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bftextfield" destination="sEl-KP-Ucv" id="cXe-V2-dwv"/>
+                        <outlet property="merchant_id" destination="F6d-NU-9d5" id="Tzh-aC-eAI"/>
+                        <outlet property="model" destination="pah-5F-Gen" id="OhC-ra-yUP"/>
+                        <outlet property="page_url" destination="FiM-uK-UAN" id="nUO-9w-nna"/>
+                        <outlet property="segment" destination="U6N-fE-bGF" id="ATJ-Se-dML"/>
+                        <outlet property="service_url" destination="ERT-ot-w0j" id="B9U-0k-6gR"/>
+                        <outlet property="terminal_id" destination="ynA-zx-hPK" id="Pu1-RC-uFN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dUj-vs-mjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678" y="365"/>
+        </scene>
+    </scenes>
+</document>
